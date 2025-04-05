@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Cpu, Memory, MonitorSmartphone } from "lucide-react";
+import { ChevronRight, Cpu, MonitorSmartphone, Disc } from "lucide-react";
 
 const HeroSection = () => {
   const [showGlow, setShowGlow] = useState(false);
@@ -68,7 +68,7 @@ const HeroSection = () => {
               </div>
               
               <div className="flex items-center gap-2">
-                <Memory className="w-5 h-5 text-neon-purple" />
+                <Disc className="w-5 h-5 text-neon-purple" />
                 <span className="text-sm text-white/70">DDR5 Ultra-rápida</span>
               </div>
             </div>
@@ -127,7 +127,7 @@ const HeroSection = () => {
         <Cpu className="text-neon-purple/30 w-16 h-16" />
       </div>
       <div className="absolute left-1/3 bottom-16 animate-float" style={{ animationDelay: "2s" }}>
-        <Memory className="text-neon-pink/30 w-10 h-10" />
+        <Disc className="text-neon-pink/30 w-10 h-10" />
       </div>
     </section>
   );
