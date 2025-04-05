@@ -125,7 +125,7 @@
   }
   
   .hero-button {
-    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold transition-all duration-300 ease-out rounded-lg group;
+    @apply relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold transition-all duration-300 ease-out rounded-lg;
   }
   
   .hero-button:hover {
