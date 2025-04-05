@@ -1,0 +1,175 @@
+
+[
+  {
+    "id": "001",
+    "title": "Quantum Rift X9",
+    "price": 2499.99,
+    "description": "Experiencia de juego definitiva con el nuevo procesador Quantum Core i9 y gráficos Neo RTX 4090",
+    "mainImage": "/placeholder.svg",
+    "brand": "Quantum",
+    "category": "Gaming",
+    "onSale": true,
+    "salePrice": 2299.99,
+    "rating": 4.9,
+    "stock": 15,
+    "featured": true,
+    "specs": {
+      "cpu": "Quantum Core i9-13900K",
+      "gpu": "Neo RTX 4090 24GB",
+      "ram": "64GB DDR5",
+      "storage": "2TB NVMe SSD",
+      "motherboard": "Quantum Z790 Pro",
+      "cooling": "Liquid Cooling 360mm",
+      "psu": "1200W Platinum"
+    }
+  },
+  {
+    "id": "002",
+    "title": "TechFusion Apex",
+    "price": 1899.99,
+    "description": "Potencia equilibrada para trabajo y entretenimiento con procesador AMD Ryzen 9",
+    "mainImage": "/placeholder.svg",
+    "brand": "TechFusion",
+    "category": "Workstation",
+    "rating": 4.7,
+    "stock": 23,
+    "recommended": true,
+    "specs": {
+      "cpu": "AMD Ryzen 9 7950X",
+      "gpu": "Neo RTX 4070 Ti 12GB",
+      "ram": "32GB DDR5",
+      "storage": "1TB NVMe SSD + 4TB HDD",
+      "motherboard": "TechFusion X670E",
+      "cooling": "Air Cooling Premium",
+      "psu": "850W Gold"
+    }
+  },
+  {
+    "id": "003",
+    "title": "Nova Stream Ultra",
+    "price": 1299.99,
+    "description": "Diseñado para creadores de contenido con procesamiento acelerado para streaming",
+    "mainImage": "/placeholder.svg",
+    "brand": "Nova",
+    "category": "Content Creation",
+    "onSale": true,
+    "salePrice": 1149.99,
+    "rating": 4.8,
+    "stock": 10,
+    "specs": {
+      "cpu": "Intel Core i7-13700K",
+      "gpu": "Neo RTX 4060 Ti 8GB",
+      "ram": "32GB DDR5",
+      "storage": "1TB NVMe SSD",
+      "motherboard": "Nova B760 Creator",
+      "cooling": "Liquid Cooling 240mm",
+      "psu": "750W Gold"
+    }
+  },
+  {
+    "id": "004",
+    "title": "Phantom Ghost Mini",
+    "price": 999.99,
+    "description": "Potencia en formato compacto, ideal para espacios reducidos sin comprometer rendimiento",
+    "mainImage": "/placeholder.svg",
+    "brand": "Phantom",
+    "category": "Compact",
+    "rating": 4.6,
+    "stock": 30,
+    "recommended": true,
+    "specs": {
+      "cpu": "AMD Ryzen 7 7700X",
+      "gpu": "Neo RTX 3060 Ti 8GB",
+      "ram": "16GB DDR5",
+      "storage": "1TB NVMe SSD",
+      "motherboard": "Phantom B650I Mini-ITX",
+      "cooling": "Air Cooling SFF",
+      "psu": "600W SFX Gold"
+    }
+  },
+  {
+    "id": "005",
+    "title": "CyberForce One",
+    "price": 3299.99,
+    "description": "La máquina definitiva para entusiastas y profesionales que exigen lo máximo",
+    "mainImage": "/placeholder.svg",
+    "brand": "CyberForce",
+    "category": "Enthusiast",
+    "rating": 5.0,
+    "stock": 5,
+    "featured": true,
+    "specs": {
+      "cpu": "Intel Core i9-13900KS",
+      "gpu": "Neo RTX 4090 Ti 24GB",
+      "ram": "128GB DDR5",
+      "storage": "4TB NVMe SSD + 8TB HDD",
+      "motherboard": "CyberForce Z790 Extreme",
+      "cooling": "Custom Loop Liquid",
+      "psu": "1600W Titanium"
+    }
+  },
+  {
+    "id": "006",
+    "title": "Eco Pulse Mini",
+    "price": 699.99,
+    "description": "Computadora eficiente energéticamente con componentes ecológicos",
+    "mainImage": "/placeholder.svg",
+    "brand": "EcoPulse",
+    "category": "Eco-friendly",
+    "onSale": true,
+    "salePrice": 649.99,
+    "rating": 4.5,
+    "stock": 40,
+    "specs": {
+      "cpu": "AMD Ryzen 5 7600",
+      "gpu": "Neo RTX 3050 8GB",
+      "ram": "16GB DDR5",
+      "storage": "512GB NVMe SSD",
+      "motherboard": "EcoPulse A520M",
+      "cooling": "Passive Cooling",
+      "psu": "450W Bronze"
+    }
+  },
+  {
+    "id": "007",
+    "title": "OfficeMax Pro",
+    "price": 799.99,
+    "description": "Solución completa para entorno de oficina con monitor incluido",
+    "mainImage": "/placeholder.svg",
+    "brand": "OfficeTech",
+    "category": "Business",
+    "rating": 4.3,
+    "stock": 50,
+    "recommended": true,
+    "specs": {
+      "cpu": "Intel Core i5-13400",
+      "gpu": "Integrated Intel UHD 770",
+      "ram": "16GB DDR4",
+      "storage": "512GB NVMe SSD + 1TB HDD",
+      "motherboard": "OfficeTech B660",
+      "cooling": "Stock Air Cooler",
+      "psu": "500W Bronze"
+    }
+  },
+  {
+    "id": "008",
+    "title": "QuantumBit Studio",
+    "price": 2199.99,
+    "description": "Estación de trabajo para diseñadores 3D y profesionales del modelado",
+    "mainImage": "/placeholder.svg",
+    "brand": "QuantumBit",
+    "category": "Design",
+    "onSale": false,
+    "rating": 4.8,
+    "stock": 12,
+    "specs": {
+      "cpu": "AMD Threadripper 3960X",
+      "gpu": "Neo RTX A5000 24GB",
+      "ram": "64GB DDR4 ECC",
+      "storage": "2TB NVMe SSD + 4TB HDD",
+      "motherboard": "QuantumBit TRX40 Pro",
+      "cooling": "Liquid Cooling 360mm",
+      "psu": "1200W Platinum"
+    }
+  }
+]
