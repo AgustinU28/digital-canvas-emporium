@@ -14,20 +14,6 @@ const Cart = () => {
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const handleCheckout = () => {
-    setIsProcessing(true);
-    
-    // Simulamos el proceso de checkout
-    setTimeout(() => {
-      toast({
-        title: "¡Compra realizada con éxito!",
-        description: "Gracias por tu compra. Recibirás un correo electrónico con los detalles.",
-      });
-      clearCart();
-      setIsProcessing(false);
-    }, 2000);
-  };
-
   const formattedTotal = new Intl.NumberFormat("es-ES", {
     style: "currency",
     currency: "USD",
@@ -96,20 +82,14 @@ const Cart = () => {
                     </div>
                   </div>
                   
-                  <Button 
-                    className="w-full bg-neon-blue hover:bg-neon-blue/90"
-                    disabled={isProcessing}
-                    onClick={handleCheckout}
-                  >
-                    {isProcessing ? (
-                      <>Procesando...</>
-                    ) : (
-                      <>
-                        <ShoppingBag className="mr-2 h-4 w-4" />
-                        Finalizar Compra
-                      </>
-                    )}
-                  </Button>
+                  <Link to="/checkout">
+                    <Button 
+                      className="w-full bg-neon-blue hover:bg-neon-blue/90"
+                    >
+                      <ShoppingBag className="mr-2 h-4 w-4" />
+                      Finalizar Compra
+                    </Button>
+                  </Link>
                   
                   <div className="mt-4 text-xs text-center text-white/40">
                     Pago seguro garantizado

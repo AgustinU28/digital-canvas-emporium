@@ -5,7 +5,7 @@
     "title": "Quantum Rift X9",
     "price": 2499.99,
     "description": "Experiencia de juego definitiva con el nuevo procesador Quantum Core i9 y gráficos Neo RTX 4090",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
     "brand": "Quantum",
     "category": "Gaming",
     "onSale": true,
@@ -21,14 +21,19 @@
       "motherboard": "Quantum Z790 Pro",
       "cooling": "Liquid Cooling 360mm",
       "psu": "1200W Platinum"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     "id": "002",
     "title": "TechFusion Apex",
     "price": 1899.99,
     "description": "Potencia equilibrada para trabajo y entretenimiento con procesador AMD Ryzen 9",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80",
     "brand": "TechFusion",
     "category": "Workstation",
     "rating": 4.7,
@@ -42,14 +47,19 @@
       "motherboard": "TechFusion X670E",
       "cooling": "Air Cooling Premium",
       "psu": "850W Gold"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1555626906-fcf10d6851b4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     "id": "003",
     "title": "Nova Stream Ultra",
     "price": 1299.99,
     "description": "Diseñado para creadores de contenido con procesamiento acelerado para streaming",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1591489378430-ef2f4669cffb?auto=format&fit=crop&w=800&q=80",
     "brand": "Nova",
     "category": "Content Creation",
     "onSale": true,
@@ -64,14 +74,19 @@
       "motherboard": "Nova B760 Creator",
       "cooling": "Liquid Cooling 240mm",
       "psu": "750W Gold"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1591489378430-ef2f4669cffb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563331425690-743c31c217ed?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     "id": "004",
     "title": "Phantom Ghost Mini",
     "price": 999.99,
     "description": "Potencia en formato compacto, ideal para espacios reducidos sin comprometer rendimiento",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1627126405196-c91ad08e5678?auto=format&fit=crop&w=800&q=80",
     "brand": "Phantom",
     "category": "Compact",
     "rating": 4.6,
@@ -85,14 +100,19 @@
       "motherboard": "Phantom B650I Mini-ITX",
       "cooling": "Air Cooling SFF",
       "psu": "600W SFX Gold"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1627126405196-c91ad08e5678?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1587134160474-cd3c89703b3e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1602934585418-f588bea4215c?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     "id": "005",
     "title": "CyberForce One",
     "price": 3299.99,
     "description": "La máquina definitiva para entusiastas y profesionales que exigen lo máximo",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1600348712270-5af9e3590f66?auto=format&fit=crop&w=800&q=80",
     "brand": "CyberForce",
     "category": "Enthusiast",
     "rating": 5.0,
@@ -106,14 +126,19 @@
       "motherboard": "CyberForce Z790 Extreme",
       "cooling": "Custom Loop Liquid",
       "psu": "1600W Titanium"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1600348712270-5af9e3590f66?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1587202372616-b43abea06c2a?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     "id": "006",
     "title": "Eco Pulse Mini",
     "price": 699.99,
     "description": "Computadora eficiente energéticamente con componentes ecológicos",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?auto=format&fit=crop&w=800&q=80",
     "brand": "EcoPulse",
     "category": "Eco-friendly",
     "onSale": true,
@@ -128,14 +153,19 @@
       "motherboard": "EcoPulse A520M",
       "cooling": "Passive Cooling",
       "psu": "450W Bronze"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1647195444955-9c3100e906e8?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     "id": "007",
     "title": "OfficeMax Pro",
     "price": 799.99,
     "description": "Solución completa para entorno de oficina con monitor incluido",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1603732551677-644e66235a91?auto=format&fit=crop&w=800&q=80",
     "brand": "OfficeTech",
     "category": "Business",
     "rating": 4.3,
@@ -149,14 +179,19 @@
       "motherboard": "OfficeTech B660",
       "cooling": "Stock Air Cooler",
       "psu": "500W Bronze"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1603732551677-644e66235a91?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1585792180666-f7347c490ee2?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1580522154071-c6ca47a859ad?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     "id": "008",
     "title": "QuantumBit Studio",
     "price": 2199.99,
     "description": "Estación de trabajo para diseñadores 3D y profesionales del modelado",
-    "mainImage": "/placeholder.svg",
+    "mainImage": "https://images.unsplash.com/photo-1618339561148-867e1fde542d?auto=format&fit=crop&w=800&q=80",
     "brand": "QuantumBit",
     "category": "Design",
     "onSale": false,
@@ -170,6 +205,11 @@
       "motherboard": "QuantumBit TRX40 Pro",
       "cooling": "Liquid Cooling 360mm",
       "psu": "1200W Platinum"
-    }
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1618339561148-867e1fde542d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1629581678313-36cf745a9af9?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&w=800&q=80"
+    ]
   }
 ]

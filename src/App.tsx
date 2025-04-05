@@ -8,6 +8,10 @@ import { CartProvider } from "@/context/CartContext";
 import Index from "./pages/Index";
 import Store from "./pages/Store";
 import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Checkout from "./pages/Checkout";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +27,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/store" element={<Store />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkout/success" element={<CheckoutSuccess />} />
+            <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
