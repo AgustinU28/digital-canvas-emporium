@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-gradient">TECH CANVAS</span>
+            <span className="text-2xl font-bold text-gradient">TECH URI</span>
           </Link>
 
           {/* Desktop Navigation */}

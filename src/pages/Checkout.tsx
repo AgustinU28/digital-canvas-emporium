@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import * as z from "zod";
@@ -73,12 +72,11 @@ const Checkout = () => {
   const onSubmit = (data: FormValues) => {
     setIsProcessing(true);
     
-    // Simulamos el envío del formulario
+    // Simulamos el envío del formulario y el envío del correo electrónico
     setTimeout(() => {
       // Generamos un ID de pedido aleatorio
       const orderId = Math.random().toString(36).substring(2, 10).toUpperCase();
       
-      // Enviamos un correo (simulado)
       console.log("Enviando correo a:", data.email);
       console.log("Datos del pedido:", {
         orderId,
@@ -88,9 +86,21 @@ const Checkout = () => {
         shippingAddress: `${data.address}, ${data.city}, ${data.zipCode}`,
       });
       
+      // Simulamos el envío de un ticket por correo electrónico
+      const emailContent = generateEmailTicket({
+        orderId,
+        customerName: `${data.firstName} ${data.lastName}`,
+        email: data.email,
+        items: cartItems,
+        total: totalAmount,
+        shippingAddress: `${data.address}, ${data.city}, ${data.zipCode}`,
+      });
+      
+      console.log("Contenido del correo electrónico:", emailContent);
+      
       toast({
         title: "¡Pedido completado!",
-        description: `Tu pedido #${orderId} ha sido procesado correctamente. Recibirás un correo de confirmación en breve.`,
+        description: `Tu pedido #${orderId} ha sido procesado correctamente. Se ha enviado un ticket de confirmación a ${data.email}.`,
       });
       
       clearCart();
@@ -104,6 +114,50 @@ const Checkout = () => {
       
       setIsProcessing(false);
     }, 2000);
+  };
+
+  // Función para generar el contenido del ticket de correo electrónico
+  const generateEmailTicket = (orderData: {
+    orderId: string;
+    customerName: string;
+    email: string;
+    items: any[];
+    total: number;
+    shippingAddress: string;
+  }) => {
+    const itemsList = orderData.items.map(item => 
+      `${item.product.title} x ${item.quantity} - $${((item.product.salePrice || item.product.price) * item.quantity).toFixed(2)}`
+    ).join('\n');
+    
+    const formattedTotal = new Intl.NumberFormat("es-ES", {
+      style: "currency",
+      currency: "USD",
+    }).format(orderData.total);
+    
+    return `
+      TECH URI - Ticket de Compra
+      ==========================
+      
+      ¡Gracias por tu compra, ${orderData.customerName}!
+      
+      Número de pedido: ${orderData.orderId}
+      Fecha: ${new Date().toLocaleDateString()}
+      
+      PRODUCTOS:
+      ${itemsList}
+      
+      TOTAL: ${formattedTotal}
+      
+      Dirección de envío:
+      ${orderData.shippingAddress}
+      
+      Tu pedido está siendo procesado y será enviado lo antes posible.
+      
+      Si tienes alguna duda, responde a este correo electrónico.
+      
+      Saludos,
+      El equipo de TECH URI
+    `;
   };
 
   const formattedTotal = new Intl.NumberFormat("es-ES", {

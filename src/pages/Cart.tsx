@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CartItem from "@/components/CartItem";
@@ -10,6 +10,7 @@ import { ArrowLeft, ShoppingBag, Trash2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const { cartItems, clearCart, totalAmount } = useCart();
   const { toast } = useToast();
   const [isProcessing, setIsProcessing] = useState(false);
@@ -19,6 +20,18 @@ const Cart = () => {
     currency: "USD",
     minimumFractionDigits: 2,
   }).format(totalAmount);
+  
+  const handleCheckout = () => {
+    if (cartItems.length === 0) {
+      toast({
+        title: "El carrito está vacío",
+        description: "Agrega productos al carrito antes de finalizar la compra",
+        variant: "destructive",
+      });
+      return;
+    }
+    navigate("/checkout");
+  };
 
   return (
     <div className="bg-dark min-h-screen flex flex-col">
@@ -82,14 +95,13 @@ const Cart = () => {
                     </div>
                   </div>
                   
-                  <Link to="/checkout">
-                    <Button 
-                      className="w-full bg-neon-blue hover:bg-neon-blue/90"
-                    >
-                      <ShoppingBag className="mr-2 h-4 w-4" />
-                      Finalizar Compra
-                    </Button>
-                  </Link>
+                  <Button 
+                    className="w-full bg-neon-blue hover:bg-neon-blue/90"
+                    onClick={handleCheckout}
+                  >
+                    <ShoppingBag className="mr-2 h-4 w-4" />
+                    Finalizar Compra
+                  </Button>
                   
                   <div className="mt-4 text-xs text-center text-white/40">
                     Pago seguro garantizado
