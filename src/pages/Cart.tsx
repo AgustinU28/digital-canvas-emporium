@@ -30,6 +30,8 @@ const Cart = () => {
       });
       return;
     }
+    
+    // Explicitly navigate to checkout
     navigate("/checkout");
   };
 
@@ -98,6 +100,7 @@ const Cart = () => {
                   <Button 
                     className="w-full bg-neon-blue hover:bg-neon-blue/90"
                     onClick={handleCheckout}
+                    type="button"
                   >
                     <ShoppingBag className="mr-2 h-4 w-4" />
                     Finalizar Compra

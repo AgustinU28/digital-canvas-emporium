@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Logo & Info */}
           <div>
             <Link to="/" className="inline-block">
-              <h2 className="text-2xl font-bold text-gradient mb-4">TECH CANVAS</h2>
+              <h2 className="text-2xl font-bold text-gradient mb-4">TECH URI</h2>
             </Link>
             <p className="text-sm text-white/60 mb-6">
               Explorando el futuro de la tecnología con un enfoque en diseño, 
@@ -99,7 +99,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-white/40 mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Tech Canvas. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Tech URI. Todos los derechos reservados.
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-end">
             <Link to="/terms" className="text-sm text-white/40 hover:text-white">

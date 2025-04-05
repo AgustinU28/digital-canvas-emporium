@@ -42,7 +42,7 @@ const CartItem = ({ item }: CartItemProps) => {
     <div className="tech-card p-4 flex flex-col sm:flex-row items-start gap-4 mb-4">
       <div className="w-full sm:w-24 aspect-square bg-white/5 rounded-lg overflow-hidden flex-shrink-0">
         <img
-          src={product.mainImage}
+          src={product.mainImage || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&auto=format&fit=crop"}
           alt={product.title}
           className="w-full h-full object-cover"
         />

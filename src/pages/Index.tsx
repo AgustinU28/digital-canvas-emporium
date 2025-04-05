@@ -21,7 +21,7 @@ const Index = () => {
     <div className="bg-dark min-h-screen flex flex-col">
       {loading ? (
         <div className="fixed inset-0 flex items-center justify-center bg-dark z-50">
-          <div className="text-3xl font-bold text-gradient">TECH CANVAS</div>
+          <div className="text-3xl font-bold text-gradient">TECH URI</div>
         </div>
       ) : (
         <>

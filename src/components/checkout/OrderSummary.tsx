@@ -18,7 +18,11 @@ const OrderSummary = () => {
         {cartItems.map((item) => (
           <div key={item.product.id} className="flex items-center gap-3">
             <div className="w-16 h-16 bg-white/5 rounded-md overflow-hidden flex-shrink-0">
-              <img src={item.product.mainImage} alt={item.product.title} className="w-full h-full object-cover" />
+              <img 
+                src={item.product.mainImage || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&auto=format&fit=crop"} 
+                alt={item.product.title} 
+                className="w-full h-full object-cover" 
+              />
             </div>
             <div className="flex-grow">
               <p className="font-medium text-sm">{item.product.title}</p>
