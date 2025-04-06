@@ -48,14 +48,14 @@ const HeroSection = () => {
             
             <div className="flex flex-wrap gap-4">
               <Link to="/store">
-                <Button className="hero-button group">
+                <Button className="hero-button group relative z-10">
                   Explora la colección
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               
               <Link to="/about">
-                <Button variant="outline" className="text-white bg-white/5 hover:bg-white/10 border border-white/10 text-lg">
+                <Button variant="outline" className="text-white bg-white/5 hover:bg-white/10 border border-white/10 text-lg relative z-10">
                   Conócenos
                 </Button>
               </Link>
@@ -81,9 +81,9 @@ const HeroSection = () => {
             }`}>
               <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative">
                 <img 
-                  src="/placeholder.svg" 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                   className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]"
-                  alt="Computadora futurista" 
+                  alt="Laptop futurista con iluminación" 
                 />
               </div>
             </div>
