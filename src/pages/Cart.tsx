@@ -21,7 +21,9 @@ const Cart = () => {
     minimumFractionDigits: 2,
   }).format(totalAmount);
   
-  const handleCheckout = () => {
+  const handleCheckout = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
     if (cartItems.length === 0) {
       toast({
         title: "El carrito está vacío",
@@ -31,7 +33,7 @@ const Cart = () => {
       return;
     }
     
-    // Explicitly navigate to checkout
+    // Navigate to checkout
     navigate("/checkout");
   };
 
@@ -65,6 +67,7 @@ const Cart = () => {
                     variant="outline" 
                     className="text-red-400 border-red-400/20 hover:bg-red-400/10"
                     onClick={clearCart}
+                    type="button"
                   >
                     <Trash2 className="mr-2 h-4 w-4" />
                     Vaciar Carrito

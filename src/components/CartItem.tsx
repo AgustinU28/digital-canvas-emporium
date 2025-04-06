@@ -12,15 +12,21 @@ const CartItem = ({ item }: CartItemProps) => {
   const { updateQuantity, removeFromCart } = useCart();
   const { product, quantity } = item;
 
-  const handleIncrement = () => {
+  const handleIncrement = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     updateQuantity(product.id, quantity + 1);
   };
 
-  const handleDecrement = () => {
+  const handleDecrement = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     updateQuantity(product.id, quantity - 1);
   };
 
-  const handleRemove = () => {
+  const handleRemove = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     removeFromCart(product.id);
   };
 
@@ -64,6 +70,7 @@ const CartItem = ({ item }: CartItemProps) => {
         <div className="flex justify-between items-center mt-4">
           <div className="flex items-center space-x-1">
             <Button
+              type="button"
               variant="outline"
               size="icon"
               className="h-8 w-8 rounded-full bg-white/5 border-white/10"
@@ -74,6 +81,7 @@ const CartItem = ({ item }: CartItemProps) => {
             </Button>
             <span className="w-10 text-center">{quantity}</span>
             <Button
+              type="button"
               variant="outline"
               size="icon"
               className="h-8 w-8 rounded-full bg-white/5 border-white/10"
@@ -90,6 +98,7 @@ const CartItem = ({ item }: CartItemProps) => {
             </div>
             
             <Button
+              type="button"
               variant="ghost"
               size="icon"
               className="text-white/60 hover:text-white hover:bg-red-500/10"
