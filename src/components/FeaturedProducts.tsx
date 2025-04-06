@@ -45,7 +45,7 @@ const FeaturedProducts = ({ title, subTitle, filterFn }: FeaturedProductsProps) 
               key={product.id}
               product={{
                 ...product,
-                mainImage: product.mainImage || getRandomProductImage(product.id)
+                mainImage: product.mainImage || getRandomProductImage(Number(product.id))
               }}
               featured={product.featured}
             />
