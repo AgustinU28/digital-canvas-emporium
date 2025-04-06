@@ -162,6 +162,18 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
     }, 2000);
   };
 
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    form.handleSubmit(onSubmit)(e);
+  };
+
+  const handleBackToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigate("/cart");
+  };
+
   return (
     <div className="tech-card p-6 mb-6">
       <h2 className="text-xl font-semibold mb-4 flex items-center">
@@ -170,7 +182,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
       </h2>
       
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleFormSubmit} className="space-y-4 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -179,7 +191,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
                 <FormItem>
                   <FormLabel>Nombre</FormLabel>
                   <FormControl>
-                    <Input placeholder="Tu nombre" {...field} className="bg-white/5 border-white/10" />
+                    <Input placeholder="Tu nombre" {...field} className="bg-white/5 border-white/10 relative z-10" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -192,7 +204,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
                 <FormItem>
                   <FormLabel>Apellido</FormLabel>
                   <FormControl>
-                    <Input placeholder="Tu apellido" {...field} className="bg-white/5 border-white/10" />
+                    <Input placeholder="Tu apellido" {...field} className="bg-white/5 border-white/10 relative z-10" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -208,7 +220,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
                 <FormItem>
                   <FormLabel>Correo Electrónico</FormLabel>
                   <FormControl>
-                    <Input placeholder="tu@email.com" {...field} className="bg-white/5 border-white/10" />
+                    <Input placeholder="tu@email.com" {...field} className="bg-white/5 border-white/10 relative z-10" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -221,7 +233,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
                 <FormItem>
                   <FormLabel>Teléfono</FormLabel>
                   <FormControl>
-                    <Input placeholder="Tu número de teléfono" {...field} className="bg-white/5 border-white/10" />
+                    <Input placeholder="Tu número de teléfono" {...field} className="bg-white/5 border-white/10 relative z-10" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -236,7 +248,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
               <FormItem>
                 <FormLabel>Dirección</FormLabel>
                 <FormControl>
-                  <Input placeholder="Calle, número, piso..." {...field} className="bg-white/5 border-white/10" />
+                  <Input placeholder="Calle, número, piso..." {...field} className="bg-white/5 border-white/10 relative z-10" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -251,7 +263,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
                 <FormItem>
                   <FormLabel>Ciudad</FormLabel>
                   <FormControl>
-                    <Input placeholder="Tu ciudad" {...field} className="bg-white/5 border-white/10" />
+                    <Input placeholder="Tu ciudad" {...field} className="bg-white/5 border-white/10 relative z-10" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -264,7 +276,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
                 <FormItem>
                   <FormLabel>Código Postal</FormLabel>
                   <FormControl>
-                    <Input placeholder="Código postal" {...field} className="bg-white/5 border-white/10" />
+                    <Input placeholder="Código postal" {...field} className="bg-white/5 border-white/10 relative z-10" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -281,7 +293,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
                 <FormControl>
                   <Textarea 
                     placeholder="Instrucciones especiales para la entrega..." 
-                    className="min-h-[120px] bg-white/5 border-white/10"
+                    className="min-h-[120px] bg-white/5 border-white/10 relative z-10"
                     {...field}
                   />
                 </FormControl>
@@ -294,8 +306,8 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
             <Button 
               type="button" 
               variant="outline" 
-              onClick={() => navigate("/cart")}
-              className="border-white/10 bg-white/5"
+              onClick={handleBackToCart}
+              className="border-white/10 bg-white/5 relative z-20"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Volver al carrito
@@ -303,7 +315,7 @@ const CheckoutForm = ({ onOrderComplete }: CheckoutFormProps) => {
             <Button 
               type="submit" 
               disabled={isProcessing}
-              className="bg-neon-blue hover:bg-neon-blue/90"
+              className="bg-neon-blue hover:bg-neon-blue/90 relative z-20"
             >
               <CreditCard className="mr-2 h-4 w-4" />
               {isProcessing ? "Procesando..." : "Confirmar pedido"}
