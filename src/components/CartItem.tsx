@@ -73,7 +73,7 @@ const CartItem = ({ item }: CartItemProps) => {
               type="button"
               variant="outline"
               size="icon"
-              className="h-8 w-8 rounded-full bg-white/5 border-white/10"
+              className="h-8 w-8 rounded-full bg-white/5 border-white/10 relative z-10"
               onClick={handleDecrement}
               disabled={quantity <= 1}
             >
@@ -84,7 +84,7 @@ const CartItem = ({ item }: CartItemProps) => {
               type="button"
               variant="outline"
               size="icon"
-              className="h-8 w-8 rounded-full bg-white/5 border-white/10"
+              className="h-8 w-8 rounded-full bg-white/5 border-white/10 relative z-10"
               onClick={handleIncrement}
             >
               <Plus className="h-3 w-3" />
@@ -101,7 +101,7 @@ const CartItem = ({ item }: CartItemProps) => {
               type="button"
               variant="ghost"
               size="icon"
-              className="text-white/60 hover:text-white hover:bg-red-500/10"
+              className="text-white/60 hover:text-white hover:bg-red-500/10 relative z-10"
               onClick={handleRemove}
             >
               <Trash2 className="h-4 w-4" />
