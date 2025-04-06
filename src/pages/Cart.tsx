@@ -23,6 +23,7 @@ const Cart = () => {
   
   const handleCheckout = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     
     if (cartItems.length === 0) {
       toast({
@@ -101,7 +102,7 @@ const Cart = () => {
                   </div>
                   
                   <Button 
-                    className="w-full bg-neon-blue hover:bg-neon-blue/90"
+                    className="w-full bg-neon-blue hover:bg-neon-blue/90 relative z-20"
                     onClick={handleCheckout}
                     type="button"
                   >
